@@ -57,7 +57,7 @@ $randomName = ($allowedChars | Get-Random -Count $LengthOfName) -join ""
 Add-Type -AssemblyName Microsoft.VisualBasic
 $ComputerName = [Microsoft.VisualBasic.Interaction]::InputBox('Computer Name', 'Computer Name', $randomName)
 Write-Host "Computer will be renamed to $ComputerName once complete"
-Write-Host -ForegroundColor Green "Starting OSDCloud ZTI"
+Write-Host -ForegroundColor Blue "Starting OSDCloud ZTI"
 
 Start-Sleep -Seconds 5
 
