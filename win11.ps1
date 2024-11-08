@@ -1,4 +1,4 @@
-$CustomImageFile = "http://wds/esd/win11pro21H2drivers.esd"; $Index = 1 # Windows 11 Image
+$CustomImageFile = "http://JRB-OSD/esd/win11pro21H2drivers.esd"; $Index = 1 # Windows 11 Image
 
 function Show-Menu {
     param (
@@ -24,15 +24,15 @@ do
     {
     '1' {
     write-host 'You selected Windows 11 Pro (Generic) Image'
-    $CustomImageFile = "http://wds/esd/Win11Pro_Generic.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_Generic.esd"
     $selection = 'q'
     } '2' {
     write-host 'You selected Windows 11 Pro (All Drivers) Image'
-    $CustomImageFile = "http://wds/esd/Win11Pro_AllDrivers.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_AllDrivers.esd"
     $selection = 'q'
     } '3' {
     write-host 'You selected Windows 10 Pro (Generic) Image'
-    $CustomImageFile = "http://wds/esd/Win10Pro_Generic.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/Win10Pro_Generic.esd"
     $selection = 'q'
     
     } 'Q' {
