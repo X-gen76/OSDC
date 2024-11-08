@@ -1,17 +1,25 @@
 # Custom Image URL
-$CustomImageFile = "http://JRB-OSD/esd/win11pro21H2drivers.esd"; $Index = 1 # Windows 11 Image
+#$CustomImageFile = "http://wds/esd/win10pro21H2.esd"; $index = 8 # Windows 10 Image
+$CustomImageFile = "http://wds/esd/win11pro21H2drivers.esd"; $Index = 1 # Windows 11 Image
+
 function Show-Menu {
     param (
-        [string]$Title = 'Select your Image'
+        [string]$Title = 'Image Selection'
     )
     Clear-Host
     Write-Host "================ $Title ================"
     
-    Write-Host "1: Windows 10 Pro (Generic)"
+    Write-Host "1: Windows 11 Pro (Generic)"
     Write-Host "2: Windows 11 Pro (All Drivers)"
-    Write-Host "3: Windows 11 Pro (Generic)"
+    Write-Host "3: Windows 10 Pro (Generic)"
+    Write-Host "4: Surface Pro 9"
+    Write-Host "5: Lenovo ThinkBook G6"
+    Write-Host "6: Surface Go 4"
+    Write-Host "7: Lenovo ThinkCentre M70s G3"
+    Write-Host "8: Lenovo ThinkCentre G7"
     
 }
+
 
 do
  {
