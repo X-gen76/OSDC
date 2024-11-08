@@ -1,5 +1,3 @@
-# Custom Image URL
-#$CustomImageFile = "http://wds/esd/win10pro21H2.esd"; $index = 8 # Windows 10 Image
 $CustomImageFile = "http://wds/esd/win11pro21H2drivers.esd"; $Index = 1 # Windows 11 Image
 
 function Show-Menu {
@@ -17,6 +15,8 @@ function Show-Menu {
     Write-Host "6: Surface Go 4"
     Write-Host "7: Lenovo ThinkCentre M70s G3"
     Write-Host "8: Lenovo ThinkCentre G7"
+    Write=Host "Q: Press Q to quit."
+
     
 }
 
@@ -59,6 +59,8 @@ do
     write-host 'Using ThinkBook G7 image'
     $CustomImageFile = "http://wds/esd/Win11_LenovoThinkBookG7.esd"
     $selection = 'q'
+    } 'Q' {
+    return
     }
     
     }
