@@ -7,14 +7,9 @@ function Show-Menu {
     Clear-Host
     Write-Host "================ $Title ================"
     
-    Write-Host "1: Windows 11 Pro (Generic)"
+    Write-Host "1: Windows 10 Pro"
     Write-Host "2: Windows 11 Pro (All Drivers)"
-    Write-Host "3: Windows 10 Pro (Generic)"
-    Write-Host "4: Surface Pro 9"
-    Write-Host "5: Lenovo ThinkBook G6"
-    Write-Host "6: Surface Go 4"
-    Write-Host "7: Lenovo ThinkCentre M70s G3"
-    Write-Host "8: Lenovo ThinkCentre G7"
+    Write-Host "3: Windows 11 Pro "
     Write-Host "Q: Press Q to quit."
 
     
@@ -24,41 +19,22 @@ function Show-Menu {
 do
  {
     Show-Menu
-    $selection = Read-Host "Please make a selection"
+    $selection = Read-Host "Please select the image that you want to deploy"
     switch ($selection)
     {
     '1' {
-    write-host 'Using Windows 11 Pro (Generic) Image'
+    write-host 'You selected Windows 11 Pro (Generic) Image'
     $CustomImageFile = "http://wds/esd/Win11Pro_Generic.esd"
     $selection = 'q'
     } '2' {
-    write-host 'Using Windows 11 Pro (All Drivers) Image'
+    write-host 'You selected Windows 11 Pro (All Drivers) Image'
     $CustomImageFile = "http://wds/esd/Win11Pro_AllDrivers.esd"
     $selection = 'q'
     } '3' {
-    write-host 'Using Windows 10 Pro (Generic) Image'
+    write-host 'You selected Windows 10 Pro (Generic) Image'
     $CustomImageFile = "http://wds/esd/Win10Pro_Generic.esd"
     $selection = 'q'
-    } '4' {
-    write-host 'Using Surface Pro 9 image'
-    $CustomImageFile = "http://wds/esd/Win11_SurfacePro9.esd"
-    $selection = 'q'
-    } '5' {
-    write-host 'Using Lenovo ThinkBook G6 image'
-    $CustomImageFile = "http://wds/esd/Win11_LenovoThinkBookG6.esd"
-    $selection = 'q'
-    } '6' {
-    write-host 'Using Surface Go 4 image'
-    $CustomImageFile = "http://wds/esd/Win11_SurfaceGo4.esd"
-    $selection = 'q'
-    } '7' {
-    write-host 'Using ThinkCentre M70s G3 image'
-    $CustomImageFile = "http://wds/esd/Win11_ThinkCentreM70sG3.esd"
-    $selection = 'q'
-    } '8' {
-    write-host 'Using ThinkBook G7 image'
-    $CustomImageFile = "http://wds/esd/Win11_LenovoThinkBookG7.esd"
-    $selection = 'q'
+    
     } 'Q' {
     return
     }
@@ -89,18 +65,11 @@ Start-Sleep -Seconds 5
 
 if ((Get-MyComputerModel) -match 'Virtual') {
 
-Write-Host -ForegroundColor Green "Setting Display Resolution to 1600x"
+Write-Host -ForegroundColor Green "Setting the Display Resolution to 1600x"
 
 Set-DisRes 1600
 
 }
-
-#Make sure I have the latest OSD Content
-
-#Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-
-#Install-Module OSD -RequiredVersion 22.5.10.1 -Force #Get specific version
-#Install-Module OSD -Force
 
 Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
 
@@ -154,7 +123,7 @@ Import-Module OSD
 
 #Start OSDCloud ZTI the RIGHT way
 
-Write-Host -ForegroundColor Green "Start OSDCloud"
+Write-Host -ForegroundColor Blue "Start OSDCloud"
 
 #Start-OSDCloud -OSLanguage en-gb -OSBuild 21H2 -OSEdition Pro -ZTI -SkipAutopilot 
 #Start-OSDCloud -ImageFileUrl $CustomImageFile -ImageIndex $Index -ZTI -firmware -SkipAutopilot -SkipODT
@@ -172,7 +141,7 @@ if (-not (Test-Path -Path "C:\temp")) {
 }
 Set-Content -Path "C:\temp\computername.txt" -Value $ComputerName
 
-Write-Host -ForegroundColor Green "Restarting in 20 seconds!"
+Write-Host -ForegroundColor Blue "Restarting in 20 seconds!"
 
 Start-Sleep -Seconds 20
 
