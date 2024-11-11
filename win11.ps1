@@ -10,6 +10,7 @@ function Show-Menu {
     Write-Host "1: Windows 10 Pro"
     Write-Host "2: Windows 11 Pro (All Drivers)"
     Write-Host "3: Windows 11 Pro "
+    Write-Host "4: NUC7i7BNH Windows 10 Pro "
     Write-Host "Q: Press Q to quit."
 
     
@@ -31,6 +32,10 @@ do
     $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_AllDrivers.esd"
     $selection = 'q'
     } '3' {
+    write-host 'You selected NUC7i7BNH Windows 10 Pro'
+    $CustomImageFile = "http://JRB-OSD/esd/NUC7i7BNH.esd"
+    $selection = 'q'
+    } '4' {
     write-host 'You selected Windows 10 Pro (Generic) Image'
     $CustomImageFile = "http://JRB-OSD/esd/Win10Pro_Generic.esd"
     $selection = 'q'
