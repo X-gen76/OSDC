@@ -25,15 +25,15 @@ do
     {
     '1' {
     write-host 'You selected Windows 11 Pro (Generic) Image'
-    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_Generic.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro/Win11Pro_Generic.esd"
     $selection = 'q'
     } '2' {
     write-host 'You selected Windows 11 Pro (All Drivers) Image'
-    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_AllDrivers.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/Win11Pro_AllDrivers/Win11Pro_AllDrivers.esd"
     $selection = 'q'
     } '3' {
     write-host 'You selected NUC7i7BNH Windows 10 Pro'
-    $CustomImageFile = "http://JRB-OSD/esd/NUC7i7BNH.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/NUC7i7BNH/NUC7i7BNH.esd"
     $selection = 'q'
     } '4' {
     write-host 'You selected Windows 10 Pro (Generic) Image'
