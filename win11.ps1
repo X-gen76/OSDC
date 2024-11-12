@@ -9,8 +9,8 @@ function Show-Menu {
     
     Write-Host "1: Windows 10 Pro"
     Write-Host "2: Windows 11 Pro (All Drivers)"
-    Write-Host "3: Windows 11 Pro "
-    Write-Host "4: NUC7i7BNH Windows 10 Pro "
+    Write-Host "3: NUC7i7BNH Windows 10 Pro "
+    Write-Host "4: Windows 11 Pro "
     Write-Host "Q: Press Q to quit."
 
     
