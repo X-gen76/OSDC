@@ -33,7 +33,7 @@ do
     $selection = 'q'
     } '3' {
     write-host 'You selected NUC7i7BNH Windows 10 Pro'
-    $CustomImageFile = "http://JRB-OSD/esd/NUC7i7BNH/NUC7i7BNH.esd"
+    $CustomImageFile = "http://JRB-OSD/esd/NUC7i7BNH/Win11_NUC7i7BNH.esd"
     $selection = 'q'
     } '4' {
     write-host 'You selected Windows 10 Pro (Generic) Image'
