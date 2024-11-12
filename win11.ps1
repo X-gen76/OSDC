@@ -2,7 +2,7 @@ $CustomImageFile = "http://JRB-OSD/esd/win11pro21H2drivers.esd"; $Index = 1 # Wi
 
 function Show-Menu {
     param (
-        [string]$Title = 'Image Selection'
+        [string]$Title = 'Select your image.'
     )
     Clear-Host
     Write-Host "================ $Title ================"
